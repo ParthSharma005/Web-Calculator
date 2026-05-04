@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calc.css">
+    <link rel="icon" href="Calc.png">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div id="calcBody">
+        <div id="screen"><p id="op">O/P</p></div>
+        <div class="keys">
+            <button onclick="toScreen('C')" class="ops">C</button>
+            <button onclick="toScreen('**2')" class="ops">x²</button>
+            <button onclick="toScreen('**0.5')" class="ops">√x</button>
+            <button onclick="toScreen('/')" class="ops">÷</button>
+            <button onclick="toScreen(7)" class="num">7</button>
+            <button onclick="toScreen(8)" class="num">8</button>
+            <button onclick="toScreen(9)" class="num">9</button>
+            <button onclick="toScreen('*')" class="ops">×</button>
+            <button onclick="toScreen(4)" class="num">4</button>
+            <button onclick="toScreen(5)" class="num">5</button>
+            <button onclick="toScreen(6)" class="num">6</button>
+            <button onclick="toScreen('+')" class="ops">+</button>
+            <button onclick="toScreen(1)" class="num">1</button>
+            <button onclick="toScreen(2)" class="num">2</button>
+            <button onclick="toScreen(3)" class="num">3</button>
+            <button onclick="toScreen('-')" class="ops">-</button>
+            <button onclick="toScreen('0')" class="num">0</button>
+            <button onclick="toScreen('.')" class="num">.</button>
+            <button onclick="bkspc()" class="num">←</button>
+            <button onclick="compute()" class="ops">=</button>
+        </div>
+    </div>
+    <script src="Calc.js"></script>
+</body>
+</html>
