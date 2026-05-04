@@ -65,15 +65,9 @@ This project focuses on implementing real-world calculator logic, handling edge 
 
 ## How to Run
 
-1. Clone this repository
+Open this link in your browser
 
-```
-git clone https://github.com/your-username/calculator.git
-```
-
-2. Open `Calc.html` in your browser
-
----
+https://parthsharma005.github.io/Web-Calculator/
 
 ## Note
 
