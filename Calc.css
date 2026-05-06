@@ -1,73 +1,115 @@
-body{
- a  box-sizing: border-box;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     background-color: rgb(13, 13, 13);
-    text-align: center;
-}
-h1{
-    color: rgb(255, 255, 255);
-    position: relative;
-    width:max-content;
-    margin-bottom:30px;
-    margin-left: 100px;
-}
-h1::after{
-    content:"";
-    position: absolute;
-    width:100%;
-    height:3px;
-    bottom:-6px;
-    left:0;
-    background: linear-gradient(to right, rgb(248, 12, 252),rgb(11, 43, 171));
-}
-#calcBody{
-    width:355px;
-    height:390px;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom right, rgb(248, 12, 252),rgb(11, 43, 171));
-    border-radius: 15px;
-    box-shadow: 0px 0px 5px rgb(157, 9, 221);
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
     position: relative;
+    margin-bottom: 30px;
 }
-#screen{
-    width:90%;
-    height:14%;
-    border:2px solid black;
-    text-align:right;
+
+h1::after {
+    content: "";
     position: absolute;
-    top: 20px;
-    bottom: 10px;
-    padding-right: 5px;
-    background-color: rgb(7, 7, 7);
-    border-radius: 15px;
-    color:white;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background: linear-gradient(to right, rgb(248, 12, 252), rgb(11, 43, 171));
 }
-.keys{
+
+#calcBody {
+    width: 100%;
+    max-width: 355px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom right, rgb(248, 12, 252), rgb(11, 43, 171));
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgb(157, 9, 221);
+    gap: 20px;
+}
+
+#screen {
+    width: 100%;
+    min-height: 100px;
+    border: 2px solid black;
+    background-color: rgb(7, 7, 7);
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 15px;
+    overflow-x: auto;
+}
+
+#screen p{
+    font-size: 1.5em;
+    word-break: break-all;
+}
+
+.keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap:20px;
-    position: absolute;
-    top: 88px;
+    gap: 15px;
+    width: 100%;
 }
-.keys .num{
-    font-size: 2em;
-    width:50px;
-    background-color: black;
-    color:white;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.keys .ops{
-    font-size: 2em;
-    width:50px;
-    background-image:linear-gradient(to bottom right, orange, rgb(87, 61, 14));
-    color:black;
+
+.keys button {
+    width: 100%;
+    aspect-ratio: 1/1;
+    font-size: 1.8em;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
-button:active{
-    box-shadow: 0px 0px 5px white;
+.keys .num {
+    background-color: black;
+    color: white;
+}
+
+.keys .ops {
+    background-image: linear-gradient(to bottom right, orange, rgb(87, 61, 14));
+    color: black;
+    font-weight: bold;
+}
+
+button:active {
+    box-shadow: 0px 0px 10px white;
+    
+}
+
+@media (max-width: 380px) {
+    #calcBody {
+        padding: 15px;
+        gap: 15px;
+    }
+    .keys {
+        gap: 10px;
+    }
+    .keys button {
+        font-size: 1.5em;
+    }
+    #screen {
+        min-height: 60px;
+    }
+    #screen p {
+        font-size: 1.5em;
+    }
 }
